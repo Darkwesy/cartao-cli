@@ -11,7 +11,7 @@ class JsonService {
       github: userData.github,
       linkedin: userData.linkedin,
       stacks: userData.stacks,
-      message: "Obrigado por acessar o meu cartão digital!"
+      message: userData.message
     };
 
     const jsonString = JSON.stringify(jsonContent, null, 2);
