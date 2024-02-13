@@ -8,10 +8,11 @@ class JsonService {
     const jsonContent = {
       sessionId: userData.sessionId,
       nome: userData.nome,
+      email: userData.email,
       github: userData.github,
       linkedin: userData.linkedin,
       stacks: userData.stacks,
-      message: userData.message
+      message: userData.message,
     };
 
     const jsonString = JSON.stringify(jsonContent, null, 2);

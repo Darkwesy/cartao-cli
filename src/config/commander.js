@@ -13,6 +13,7 @@ commander
   .option('-bc --border-color <border-color>', 'BorderColor')
   .option('-m --message <message>', 'Enviar Mensagem')
   .option('-o --output <output>', 'Output')
+  .option('-em --email <email>', 'Email')
   .parse(process.argv);
 
 // console.log('DEBUG COMMANDER: ', commander.opts());

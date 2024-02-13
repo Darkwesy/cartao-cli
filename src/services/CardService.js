@@ -9,6 +9,7 @@ class CardService {
     const indices = {
       sessionId: customChalk.hex(userData.accentColor)("sessionId:"),
       nome: customChalk.hex(userData.accentColor)("nome:"),
+      email: customChalk.hex(userData.accentColor)("email:"),
       github: customChalk.hex(userData.accentColor)("github:"),
       linkedin: customChalk.hex(userData.accentColor)("linkedin:"),
       stacks: customChalk.hex(userData.accentColor)("stacks:"),

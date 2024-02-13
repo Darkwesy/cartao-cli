@@ -1,29 +1,44 @@
-# Cartão de Visitas Digital na Linha de Comando
+# Cartão Digital CLI
+> Gera um cartão digital no terminal ou em JSON através de flags.
 
-**Descrição:**
-Este projeto é um CLI simples que gera um cartão de visitas digital no terminal, contendo informações sobre o desenvolvedor. O projeto foi desenvolvido com o objetivo de testar bibliotecas interessantes do npm.
-
-**Funcionalidades:**
+## **Funcionalidades:**
 * Exibe informações de contato, como nome, email, GitHub e LinkedIn.
 * Permite personalizar cores e estilo do cartão.
 * Suporta diferentes formatos de saída, como texto simples e JSON.
 
-**Comando**
-Comandos do CLI do cartão
+## **Uso**
+> _**Implementação do cartão dentro do NPX em breve.**_
+### **Flags**
 
--n ou --nome | Define a string atrelada ao atributo nome;
--g ou --github | Define a string atrelada ao atributo github;
--li ou --linkedin | Define a string atrelada ao atributo linkedin;
--s ou --stacks | Define a string atrelada ao atributo das stacks;
--t ou --title | Define a string atrelada ao titulo do cartão (texto no topo);
--tp --title-position | Define a posição da string de titulo;
--ac --accent-color | Define a cor que ira ser colocada na borda e nos textos dos parametros;
--bs --border-style | Define o tipo da borda do cartão;
--bc --border-color | Define a cor da borda do cartão (caso esse parametro seja invocado ele ira sobescrever o -ac na borda)
+#### _Entrada de valores_
+`-t ou --title` | Define a string atrelada ao titulo do cartão (texto no topo);
 
-**Requisitos:**
-* Node.js v14 ou superior
+`--si` | Define se irá contar o sessionId ou não no cartão; 
 
+`-n ou --nome` | Define a string atrelada ao atributo nome;
 
-# Licença
-Este projeto possui licença MIT, permitido todo e qualquer modificação a partir de um FORK. Sinta-se a vontade para clonar e modificar da maneira que achar mais interessante.
+`-em --email` | Define a string atrelada ao email;
+
+`-g ou --github` | Define a string atrelada ao atributo github;
+
+`-li ou --linkedin` | Define a string atrelada ao atributo linkedin;
+
+`-s ou --stacks` | Define a string atrelada ao atributo das stacks;
+
+`-m --message` | Define a mensagem que será implementada no cartão;
+
+#### _Configurações do card no CLI_
+
+`-tp --title-position` | Define a posição da string de titulo;
+
+`-ac --accent-color` | Define a cor que ira ser colocada na borda e nos textos dos parametros;
+
+`-bs --border-style` | Define o tipo da borda do cartão;
+
+`-bc --border-color`| Define a cor da borda do cartão (caso esse parametro seja invocado ele ira sobescrever o -ac na borda);
+
+`-o --output` | Define o tipo de saida do cartão (JSON ou CLI);
+
+## Requisitos
+
+* Node.js v14 ou superior;

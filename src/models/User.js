@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
 class User {
-  constructor({ si ,nome, github, linkedin, stacks, title, titlePosition, accentColor, borderStyle, borderColor, output, message }) {
+  constructor({ si ,nome, github, linkedin, stacks, title, titlePosition, accentColor, borderStyle, borderColor, output, message, email }) {
     this.nome = nome;
     this.github = github;
     this.linkedin = linkedin;
@@ -12,7 +12,8 @@ class User {
     this.borderStyle = borderStyle;
     this.borderColor = borderColor;
     this.output = output;
-    this.message = message
+    this.message = message;
+    this.email = email;
     if (si) {
       this.sessionId = crypto.randomUUID();
     }
