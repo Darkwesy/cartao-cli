@@ -1,8 +1,9 @@
 import crypto from 'crypto'
-import { commander } from "./utils/commander.js";
+import { commander } from "./config/commander.js";
+const sessionId = crypto.randomUUID();
 
 export const userData = {
-  sessionId: crypto.randomUUID(),
+  sessionId: sessionId,
   nome:  commander.opts().nome,
   stacks: commander.opts().stacks,
   github: commander.opts().github,
@@ -11,5 +12,6 @@ export const userData = {
   titlePosition: commander.opts().titlePosition,
   accentColor: commander.opts().accentColor,
   borderStyle: commander.opts().borderStyle,
-  borderColor: commander.opts().borderColor
+  borderColor: commander.opts().borderColor,
+  output: commander.opts().output
 }

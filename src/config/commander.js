@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 const commander = new Command();
-
 commander
+  .option('--si', 'Incluir sessionId')  
   .option('-n --nome <nome>', 'Nome')
   .option('-g --github <github>', 'Github')
   .option('-li --linkedin <linkedin>', 'Linked')
@@ -11,7 +11,8 @@ commander
   .option('-ac --accent-color <accent-color>', 'AccentColor')
   .option('-bs --border-style <border-style>', 'BorderStyle')
   .option('-bc --border-color <border-color>', 'BorderColor')
-  
+  .option('-m --message <message>', 'Enviar Mensagem')
+  .option('-o --output <output>', 'Output')
   .parse(process.argv);
 
 // console.log('DEBUG COMMANDER: ', commander.opts());

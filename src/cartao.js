@@ -1,38 +1,13 @@
-import boxen from 'boxen';
-import { Chalk } from 'chalk';
-import { userData } from './dados.js';
+import { JsonService } from './services/JsonService.js';
+import { User } from './models/User.js';
+import { commander } from './config/commander.js';
+import { CardService } from './services/CardService.js';
 
-const customChalk = new Chalk({ level: 3 });
+const userData = new User(commander.opts());
 
-const indices = {
-  sessionId: customChalk.hex(userData.accentColor)("sessionId:"),
-  nome: customChalk.hex(userData.accentColor)("nome:"),
-  github: customChalk.hex(userData.accentColor)("github:"),
-  linkedin: customChalk.hex(userData.accentColor)("linkedin:"),
-  stacks: customChalk.hex(userData.accentColor)("stacks:")
+if (userData.output == 'json') {
+  JsonService.generateJson(userData);
+} else if (userData.output == 'cli') {
+  const card = CardService.generateCard(userData);
+  console.log(card);
 }
-
-const fields = ['sessionId', 'nome', 'github', 'linkedin', 'stacks'];
-
-let cardContent = '';
-
-Object.keys(indices).forEach(field => {
-  if (userData[field]) {
-    cardContent += `${indices[field]} ${userData[field]}\n`;
-  }
-});
-
-cardContent += `${customChalk.hex(userData.accentColor)("message:")} Obrigado por acessar o meu cartão digital!`
-
-const boxenOptions = {
-  padding: 0.5,
-  borderStyle: 'bold',
-  titleAlignment: userData.titlePosition || 'center',
-  borderColor: userData.borderColor || userData.accentColor || 'green',
-}
-
-if (userData.title) {
-  boxenOptions.title = customChalk.whiteBright(userData.title);
-}
-
-console.log(boxen(cardContent.trim(), boxenOptions));
