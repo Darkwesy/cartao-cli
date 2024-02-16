@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
 class User {
-  constructor({ si ,nome, github, linkedin, stacks, title, titlePosition, accentColor, borderStyle, borderColor, output, message, email }) {
+  constructor({ si, nome, github, linkedin, stacks, title, titlePosition, accentColor, borderStyle, borderColor, output, message, email }) {
     this.nome = nome;
     this.github = github;
     this.linkedin = linkedin;

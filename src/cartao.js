@@ -11,3 +11,6 @@ if (userData.output == 'json') {
   const card = CardService.generateCard(userData);
   console.log(card);
 }
+
+// Scrit para teste
+// node src/cartao --si -n "Marcos Vinicius" -g "@marcosvcsantos" -li "@marcosvcsantos" -s "C, PHP, Node, JavaScript, MySQL" -t "Marcos Vinicius" -tp "right" -ac "#325aa8" -bs "round" -m "Olá, este é o meu cartão digital." -o "cli"
